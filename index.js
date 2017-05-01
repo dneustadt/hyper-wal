@@ -37,7 +37,26 @@ const getWalColorConfig = function(input, setColor, config) {
         backgroundColor, // background color
         borderColor, // border color
         cursorColor, // cursor color
-        colors
+        colors,
+        css: `
+          ${config.css || ''}
+          .tabs_list {
+            background-color: rgba(0, 0, 0, 0.1)!important;
+          }
+          .tab_tab {
+            border-left: 1px solid rgba(0, 0, 0, 0.1)!important;
+            border-top: 1px solid rgba(0, 0, 0, 0.1)!important;
+            border-right: 1px solid rgba(255, 255, 255, 0.1)!important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1)!important;
+          }
+          .tab_tab.tab_active {
+            background-color: rgba(255, 255, 255, 0.1)!important;
+            border-left: 1px solid rgba(255, 255, 255, 0.1)!important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1)!important;
+            border-right: 1px solid rgba(0, 0, 0, 0.1)!important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)!important;
+          }
+        `
     })
 };
 const file_path = require('os').homedir() + '/.cache/wal/colors';
