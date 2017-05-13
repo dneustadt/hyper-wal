@@ -40,6 +40,12 @@ const getWalColorConfig = function(input, setColor, config) {
         colors,
         css: `
           ${config.css || ''}
+          body, .shape_1oxq, .tab_1nfg, .active_fqd {
+            color: ${foregroundColor};
+          }
+          .closeWindow_ohv:hover {
+            color: ${colors.red};
+          }
           .tabs_list {
             background-color: rgba(0, 0, 0, 0.1)!important;
           }
